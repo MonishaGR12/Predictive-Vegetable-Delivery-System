@@ -1,0 +1,29 @@
+Flask ML API root: C:\Users\Monisha\AndroidStudioProjects\Gruno
+Primary model file: C:\Users\Monisha\AndroidStudioProjects\Gruno\price_model.pkl
+Primary encoder file: C:\Users\Monisha\AndroidStudioProjects\Gruno\label_encoders.pkl
+Fallback model file: C:\Users\Monisha\price_model.pkl
+Fallback encoder file: C:\Users\Monisha\label_encoders.pkl
+C:\Users\Monisha\.cache\codex-runtimes\codex-primary-runtime\dependencies\python\Lib\site-packages\sklearn\base.py:463: InconsistentVersionWarning: Trying to unpickle estimator DecisionTreeRegressor from version 1.7.2 when using version 1.8.0. This might lead to breaking code or invalid results. Use at your own risk. For more info please refer to:
+https://scikit-learn.org/stable/model_persistence.html#security-maintainability-limitations
+  warnings.warn(
+C:\Users\Monisha\.cache\codex-runtimes\codex-primary-runtime\dependencies\python\Lib\site-packages\sklearn\base.py:463: InconsistentVersionWarning: Trying to unpickle estimator RandomForestRegressor from version 1.7.2 when using version 1.8.0. This might lead to breaking code or invalid results. Use at your own risk. For more info please refer to:
+https://scikit-learn.org/stable/model_persistence.html#security-maintainability-limitations
+  warnings.warn(
+C:\Users\Monisha\.cache\codex-runtimes\codex-primary-runtime\dependencies\python\Lib\site-packages\sklearn\base.py:463: InconsistentVersionWarning: Trying to unpickle estimator LabelEncoder from version 1.7.2 when using version 1.8.0. This might lead to breaking code or invalid results. Use at your own risk. For more info please refer to:
+https://scikit-learn.org/stable/model_persistence.html#security-maintainability-limitations
+  warnings.warn(
+ML model loaded successfully.
+ * Serving Flask app 'app'
+ * Debug mode: off
+WARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://10.160.116.170:5000
+Press CTRL+C to quit
+127.0.0.1 - - [12/May/2026 20:49:52] "GET /health HTTP/1.1" 200 -
+127.0.0.1 - - [12/May/2026 20:50:50] "GET /favicon.ico HTTP/1.1" 404 -
+127.0.0.1 - - [12/May/2026 20:50:55] "GET /favicon.ico HTTP/1.1" 404 -
+127.0.0.1 - - [12/May/2026 21:30:22] "POST /predict HTTP/1.1" 400 -
+127.0.0.1 - - [12/May/2026 21:36:18] "POST /predict HTTP/1.1" 400 -
+127.0.0.1 - - [12/May/2026 21:36:18] "POST /predict HTTP/1.1" 200 -
+127.0.0.1 - - [12/May/2026 21:37:12] "POST /predict HTTP/1.1" 400 -

@@ -1,0 +1,11 @@
+{
+  "product_name": "Tomato",
+  "category": "Vegetables",
+  "season": "All Season",
+  "demand_level": "Medium",
+  "rainfall": 30,
+  "temperature": 70,
+  "supply_level": "Medium",
+  "festival_flag": 0,
+  "current_price": 40
+}
