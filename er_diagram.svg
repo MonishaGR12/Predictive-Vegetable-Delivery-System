@@ -1,0 +1,140 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1600" height="1100" viewBox="0 0 1600 1100">
+  <defs>
+    <style>
+      .title { font: 700 30px Arial, sans-serif; fill: #1d2a1f; }
+      .subtitle { font: 400 15px Arial, sans-serif; fill: #527157; }
+      .box { fill: #f6fff4; stroke: #5ab56a; stroke-width: 3; rx: 18; ry: 18; }
+      .box-title { font: 700 22px Arial, sans-serif; fill: #17311c; }
+      .attr { font: 15px Arial, sans-serif; fill: #233526; }
+      .pk { font-weight: 700; fill: #1d6e2a; }
+      .line { stroke: #6f7e71; stroke-width: 3; fill: none; }
+      .card { font: 700 16px Arial, sans-serif; fill: #274f2d; }
+    </style>
+  </defs>
+
+  <rect width="1600" height="1100" fill="#ffffff"/>
+  <text x="800" y="52" text-anchor="middle" class="title">E-R Diagram - Predictive Vegetable Delivery System Using Data Science</text>
+  <text x="800" y="82" text-anchor="middle" class="subtitle">Users, products, cart, addresses, orders, order items and payments</text>
+
+  <!-- Users -->
+  <rect x="60" y="140" width="280" height="220" class="box"/>
+  <text x="200" y="176" text-anchor="middle" class="box-title">Users</text>
+  <text x="85" y="212" class="attr pk">PK user_id</text>
+  <text x="85" y="238" class="attr">name</text>
+  <text x="85" y="264" class="attr">email</text>
+  <text x="85" y="290" class="attr">phone</text>
+  <text x="85" y="316" class="attr">password</text>
+  <text x="85" y="342" class="attr">created_at</text>
+
+  <!-- Addresses -->
+  <rect x="60" y="470" width="280" height="230" class="box"/>
+  <text x="200" y="506" text-anchor="middle" class="box-title">Addresses</text>
+  <text x="85" y="542" class="attr pk">PK address_id</text>
+  <text x="85" y="568" class="attr">FK user_id</text>
+  <text x="85" y="594" class="attr">address_line</text>
+  <text x="85" y="620" class="attr">city</text>
+  <text x="85" y="646" class="attr">pincode</text>
+  <text x="85" y="672" class="attr">is_default</text>
+
+  <!-- Cart -->
+  <rect x="470" y="140" width="280" height="220" class="box"/>
+  <text x="610" y="176" text-anchor="middle" class="box-title">Cart</text>
+  <text x="495" y="212" class="attr pk">PK cart_id</text>
+  <text x="495" y="238" class="attr">FK user_id</text>
+  <text x="495" y="264" class="attr">FK product_id</text>
+  <text x="495" y="290" class="attr">quantity</text>
+  <text x="495" y="316" class="attr">added_at</text>
+
+  <!-- Products -->
+  <rect x="880" y="80" width="320" height="370" class="box"/>
+  <text x="1040" y="116" text-anchor="middle" class="box-title">Products</text>
+  <text x="905" y="152" class="attr pk">PK product_id</text>
+  <text x="905" y="178" class="attr">name</text>
+  <text x="905" y="204" class="attr">category</text>
+  <text x="905" y="230" class="attr">price</text>
+  <text x="905" y="256" class="attr">current_price</text>
+  <text x="905" y="282" class="attr">predicted_price</text>
+  <text x="905" y="308" class="attr">season</text>
+  <text x="905" y="334" class="attr">demand_level</text>
+  <text x="905" y="360" class="attr">rainfall</text>
+  <text x="905" y="386" class="attr">temperature</text>
+  <text x="905" y="412" class="attr">supply_level</text>
+  <text x="1070" y="152" class="attr">festival_flag</text>
+  <text x="1070" y="178" class="attr">stock</text>
+  <text x="1070" y="204" class="attr">image_url</text>
+  <text x="1070" y="230" class="attr">is_favorite</text>
+
+  <!-- Orders -->
+  <rect x="470" y="500" width="280" height="250" class="box"/>
+  <text x="610" y="536" text-anchor="middle" class="box-title">Orders</text>
+  <text x="495" y="572" class="attr pk">PK order_id</text>
+  <text x="495" y="598" class="attr">FK user_id</text>
+  <text x="495" y="624" class="attr">FK address_id</text>
+  <text x="495" y="650" class="attr">order_date</text>
+  <text x="495" y="676" class="attr">total_amount</text>
+  <text x="495" y="702" class="attr">status</text>
+  <text x="495" y="728" class="attr">payment_status</text>
+
+  <!-- Order Items -->
+  <rect x="910" y="560" width="300" height="240" class="box"/>
+  <text x="1060" y="596" text-anchor="middle" class="box-title">Order_Items</text>
+  <text x="935" y="632" class="attr pk">PK order_item_id</text>
+  <text x="935" y="658" class="attr">FK order_id</text>
+  <text x="935" y="684" class="attr">FK product_id</text>
+  <text x="935" y="710" class="attr">quantity</text>
+  <text x="935" y="736" class="attr">price</text>
+
+  <!-- Payments -->
+  <rect x="1280" y="520" width="250" height="220" class="box"/>
+  <text x="1405" y="556" text-anchor="middle" class="box-title">Payments</text>
+  <text x="1305" y="592" class="attr pk">PK payment_id</text>
+  <text x="1305" y="618" class="attr">FK order_id</text>
+  <text x="1305" y="644" class="attr">payment_method</text>
+  <text x="1305" y="670" class="attr">payment_status</text>
+  <text x="1305" y="696" class="attr">amount</text>
+
+  <!-- Relationships -->
+  <line x1="340" y1="250" x2="470" y2="250" class="line"/>
+  <text x="365" y="238" class="card">1</text>
+  <text x="438" y="238" class="card">M</text>
+
+  <line x1="750" y1="250" x2="880" y2="250" class="line"/>
+  <text x="770" y="238" class="card">M</text>
+  <text x="850" y="238" class="card">1</text>
+
+  <line x1="200" y1="360" x2="200" y2="470" class="line"/>
+  <text x="212" y="392" class="card">1</text>
+  <text x="212" y="448" class="card">M</text>
+
+  <line x1="340" y1="300" x2="470" y2="580" class="line"/>
+  <text x="355" y="328" class="card">1</text>
+  <text x="442" y="540" class="card">M</text>
+
+  <line x1="340" y1="595" x2="470" y2="625" class="line"/>
+  <text x="356" y="580" class="card">1</text>
+  <text x="440" y="614" class="card">M</text>
+
+  <line x1="750" y1="620" x2="910" y2="650" class="line"/>
+  <text x="770" y="604" class="card">1</text>
+  <text x="885" y="636" class="card">M</text>
+
+  <line x1="1040" y1="450" x2="1060" y2="560" class="line"/>
+  <text x="1016" y="480" class="card">1</text>
+  <text x="1070" y="530" class="card">M</text>
+
+  <line x1="1210" y1="670" x2="1280" y2="640" class="line"/>
+  <text x="1230" y="654" class="card">1</text>
+  <text x="1260" y="628" class="card">1</text>
+
+  <!-- Legend -->
+  <rect x="1140" y="860" width="360" height="170" class="box"/>
+  <text x="1320" y="900" text-anchor="middle" class="box-title">Relationship Summary</text>
+  <text x="1170" y="934" class="attr">Users 1 : M Cart</text>
+  <text x="1170" y="958" class="attr">Products 1 : M Cart</text>
+  <text x="1170" y="982" class="attr">Users 1 : M Addresses</text>
+  <text x="1170" y="1006" class="attr">Users 1 : M Orders</text>
+  <text x="1340" y="934" class="attr">Addresses 1 : M Orders</text>
+  <text x="1340" y="958" class="attr">Orders 1 : M Order_Items</text>
+  <text x="1340" y="982" class="attr">Products 1 : M Order_Items</text>
+  <text x="1340" y="1006" class="attr">Orders 1 : 1 Payments</text>
+</svg>
